@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Artificial Inteligence (AI)",
+        "title": "Simplicity is the soul to efficiency.",
+        "details": "Artificial intelligence is the intelligence of machines or software, as opposed to the intelligence of humans or other animals. It is a field of study in computer science that develops and studies intelligent machines. Such machines may be called AIs. One of the more popular computer courses today is on AI, which allows for the creation of intelligent computer systems that process and interpret complex data. With AI gaining prominence across industries, this course provides career opportunities in machine learning, robotics, and natural language processing.",
+        "img": "https://www.businesstoday.com.my/wp-content/uploads/2023/12/What-is-Artiificial-IntelligenceAI.webp"
+    },
+    {
+        "id": 2,
+        "title": "Any fool can write code that computer understand, Good programmers write code that humans can understand",
+        "name": "Programming",
+        "details": "As the foundation of a successful software development career, learn programming languages such as Python, Java, or C++. Additionally, develop efficient, error-free code and problem-solving skills, leading to multiple opportunities in the tech industry.Computer programming or coding is the composition of sequences of instructions, called programs, that computers can follow to perform tasks. It involves designing and implementing algorithms, step-by-step specifications of procedures, by writing code in one or more programming languages.",
+        "img": "https://www.springboard.com/blog/wp-content/uploads/2022/08/programming-skills.png"
+    },
+    {
+        "id": 3,
+        "name": "Cyber Security",
+        "title": "Code is like humor. When you have to explain it, it’s bad.",
+        "details": "Computer security, cybersecurity, digital security or information technology security (IT security) is the protection of computer systems and networks from attacks by malicious actors that may result in unauthorized information disclosure, theft of, or damage to hardware, software, or data, as well as from the disruption or misdirection of the services they provide.As cyber threats become more prevalent, organizations are looking for cybersecurity professionals. Computer courses in this field, therefore, have become important. Such courses focus on understanding security threats, putting in place strong security measures, and protecting computer systems. Learn ethical hacking, vulnerability assessment, and encryption to become a valuable asset in protecting sensitive information.",
+        "img": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Use_Cases_for_Cyber_Security.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Don’t comment bad code- rewrite it.",
+        "name": "Machine Learning",
+        "details": "Explore algorithms and statistical models that allow computers to learn from data without explicit programming. Create and deploy machine learning models for automation, prediction, and pattern recognition. This, too, is an invaluable expertise to have across various domains, including finance and health care.There are four basic types of machine learning: supervised learning, unsupervised learning, semi supervised learning and reinforcement learning. The type of algorithm data scientists choose depends on the nature of the data. Supervised machine learning relies on patterns to predict values on unlabeled data. It is most often used in automation, over large amounts of data records or in cases where there are too many data inputs for humans to process effectively.",
+        "img": "https://uploads-ssl.webflow.com/611b8930015cb4be59160e08/61a5e221adc0d6298f9add5d_machinelearning.jpeg"
+    },
+    {
+        "id": 5,
+        "title": "Before software can be reusable it first has to be usable.",
+        "name": "Mobile App Development",
+        "details": "Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.Learn to develop iOS and Android applications using frameworks such as React Native or Flutter. Furthermore, gain access to the thriving app market by learning mobile app development and bringing innovative ideas to life. Mobile app development is a multi-step process that requires a great deal of planning, design, development, testing, deployment, and maintenance.",
+        "img": "https://d2ms8rpfqc4h24.cloudfront.net/mobile_application_development_ad3f711b7d.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Software Engineering",
+        "title": "A software engineer is a career in information technology that focuses on the creation and maintenance of computer software systems.",
+        "details": "Software engineering is the branch of computer science that deals with the design, development, testing, and maintenance of software applications. Software engineers apply engineering principles and knowledge of programming languages to build software solutions for end users.Learn about the software development lifecycle, from requirements analysis to deployment. This course teaches learners how to build robust, scalable software applications. Moreover, adopting best practices in software engineering allows for effective collaboration. This consequently ensures the successful delivery of projects.A software automation engineer earns an average salary of $121,466 per year.",
+        "img": "https://computerenotes.com/wp-content/uploads/2023/11/se.jpg"
+    }
+]

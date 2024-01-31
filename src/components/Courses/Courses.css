@@ -1,0 +1,12 @@
+.courses-container{
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    padding: 20px;
+}
+.course{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.course img{
+    height: 200px;
+}
