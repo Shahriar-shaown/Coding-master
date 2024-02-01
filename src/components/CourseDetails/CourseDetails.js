@@ -27,8 +27,8 @@ const CourseDetails = () => {
                     <p className='courseName'>{course.title}</p>
                     <p>{course.details}</p>
                     <div style={{display: 'flex', alignItems:'center', justifyContent:'center'}}>
-                        <img style={{borderRadius:'10px', margin:'20px'}} src={course.img} alt={course.name} />
-                        <Link style={{backgroundColor:'brown', marginLeft:'50px', color:'white',borderRadius:'10px', padding:'12px',height:'40px', textAlign:'center'}} to='/checkout'>GET PREMIUM ACCESS</Link>
+                        <img style={{borderRadius:'10px', width:"600px", margin:'20px'}} src={course.img} alt={course.name} />
+                        <Link style={{backgroundColor:'brown', marginLeft:'50px', color:'white',borderRadius:'10px', padding:'12px',height:'40px', textAlign:'center'}} to={`/checkout/${id}`} >GET PREMIUM ACCESS</Link>
                     </div>
                 </div>
             ) : (

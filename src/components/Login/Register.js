@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
 
 const Register = () => {
-    const {createUser,googleSignIn,githubSignIn} = useContext(AuthContext)
+    const {createUser,googleSignIn,githubSignIn,updateUserProfile} = useContext(AuthContext)
     const [error,setError] = useState([])
     const navigate = useNavigate()
 
@@ -26,6 +26,7 @@ const Register = () => {
             const user = result.user;
             console.log(user)
             navigate('/login')
+            updateProfile(name,photoURL)
         })
         .catch(error=>console.error(error))
     }
@@ -34,6 +35,7 @@ const Register = () => {
         .then(result=>{
             const user = result.user;
             console.log(user)
+
         })
         .catch(error=>console.error(error))
     }
@@ -45,6 +47,15 @@ const Register = () => {
             console.log(user)
         })
         .catch(error=>console.error(error))
+    }
+    const updateProfile = (name,photoURL) =>{
+        const profile = {
+            displayName : name,
+            photoURL : photoURL
+        }
+        updateUserProfile(profile)
+        .then(()=>{})
+        .catch(e=>console.error(e))
     }
     return (
         <div className="hero min-h-screen bg-base-200">

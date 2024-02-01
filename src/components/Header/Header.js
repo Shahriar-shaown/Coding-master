@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa';
+import { AuthContext } from '../../Contexts/UserContext';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
         <div>
             <div className="navbar bg-neutral">
@@ -13,14 +22,28 @@ const Header = () => {
                     <Link className='me-10 text-white' to='/courses'>Courses</Link>
                     <Link className='me-10 text-white'>FAQ</Link>
                     <Link className='me-10 text-white' to='/blog'>Blog</Link>
-                    <Link className='me-10 text-white' to='/login'>Log in</Link>
-                    <Link className='me-10 text-white' to='/register'>Register</Link>
+                    <>
+                        {
+                            user?.uid ?
+                                <Link onClick={handleLogOut} className='me-10 text-white'><button>Log out</button></Link>
+                                :
+                                <><Link className='me-10 text-white' to='/login'>Log in</Link>
+                                    <Link className='me-10 text-white' to='/register'>Register</Link>
+                                </>
+                        }
+                    </>
+                    <h4 className='text-white'>* {user?.displayName}</h4>
                 </div>
                 <div className="flex-none gap-2">
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                {
+                                    user?.photoURL ?    
+                                    <img alt={<FaUserAlt/>} src={user?.photoURL} />
+                                    :
+                                    <FaUserAlt></FaUserAlt>
+                                }
                             </div>
                         </div>
                         <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -30,8 +53,7 @@ const Header = () => {
                                     <span className="badge">New</span>
                                 </Link>
                             </li>
-                            <li><Link>Settings</Link></li>
-                            <li><Link>Logout</Link></li>
+                            <li><Link to='/profile'>Settings</Link></li>
                         </ul>
                     </div>
                 </div>

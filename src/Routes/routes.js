@@ -7,6 +7,8 @@ import Register from "../components/Login/Register";
 import Blog from "../components/Blog/Blog";
 import CourseDetails from "../components/CourseDetails/CourseDetails";
 import CheckOut from "../components/CheckOut/CheckOut";
+import Profile from "../components/Profile/Profile";
+import SecretRoute from "./SecretRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -27,9 +29,8 @@ export const routes = createBrowserRouter([
                 },
             },
             {
-                path: '/checkout',
-                element:<CheckOut></CheckOut>,
-                loader: ()=> fetch('courses.json')
+                path: '/checkout/:id',
+                element:<SecretRoute><CheckOut></CheckOut></SecretRoute>
             },
             {
                 path: '/blog',
@@ -40,9 +41,12 @@ export const routes = createBrowserRouter([
                 element: <Login></Login>
             },
             {
+                path: '/profile',
+                element:<Profile></Profile>
+            },
+            {
                 path: '/courseDetails/:id',
                 element: <CourseDetails></CourseDetails>
-
             },
             {
                 path: '/register',
