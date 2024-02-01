@@ -1,14 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/UserContext';
 
 const Login = () => {
+
+    const {logInUser,googleSignIn,githubSignIn} = useContext(AuthContext)
+
     const handleLogin = event =>{
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email,password)
+
+        logInUser(email,password)
+        .then(result=>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error=>console.error(error))
     }
+
+    const handleGoogle = () =>{
+        googleSignIn()
+        .then(result=>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error=>console.error(error))
+    }
+
+    const handleGithub = () =>{
+        githubSignIn()
+        .then(result=>{
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(error=>console.error(error))
+    }
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -38,7 +68,9 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn btn-primary">Sign In</button>
+                                <button className="btn btn-primary mt-3" onClick={handleGoogle}>Sign in with Google</button>
+                                <button className="btn btn-primary mt-3" onClick={handleGithub}>Sign in with Github</button>
                             </div>
                         </form>
                     </div>
