@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
 
 const Register = () => {
-    const {createUser,googleSignIn,githubSignIn,updateUserProfile} = useContext(AuthContext)
+    const {createUser,updateUserProfile} = useContext(AuthContext)
     const [error,setError] = useState([])
     const navigate = useNavigate()
 
@@ -25,26 +25,8 @@ const Register = () => {
         .then(result=>{
             const user = result.user;
             console.log(user)
-            navigate('/login')
+            navigate('/')
             updateProfile(name,photoURL)
-        })
-        .catch(error=>console.error(error))
-    }
-    const handleGoogle = () =>{
-        googleSignIn()
-        .then(result=>{
-            const user = result.user;
-            console.log(user)
-
-        })
-        .catch(error=>console.error(error))
-    }
-
-    const handleGithub = () =>{
-        githubSignIn()
-        .then(result=>{
-            const user = result.user;
-            console.log(user)
         })
         .catch(error=>console.error(error))
     }
@@ -93,11 +75,10 @@ const Register = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
-                                <button className="btn btn-primary mt-3" onClick={handleGoogle}>Register with Google</button>
-                                <button className="btn btn-primary mt-3" onClick={handleGithub}>Register with Github</button>
                             </div>
                         </form>
-                    </div>
+                        
+                    </div>{/* form ended */}
                 </div>
             </div>
     );
